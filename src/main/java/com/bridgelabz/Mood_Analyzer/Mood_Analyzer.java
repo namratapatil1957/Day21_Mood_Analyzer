@@ -2,9 +2,19 @@ package com.bridgelabz.Mood_Analyzer;
 
 public class Mood_Analyzer {
 	
-	public void analyseMood(String str) {
+	String string;
+
+	public Mood_Analyzer(String string) {
+		this.string = string;
+	}
+
+	public Mood_Analyzer() {
 		
-		if (str.contains("happy")) {
+	}
+
+	public void analyseMood() {
+		
+		if (string.contains("happy")) {
 			
 			System.out.println(" Happy Mood ");
 			
@@ -18,9 +28,9 @@ public class Mood_Analyzer {
 	
 	public static void main(String[] args) {
 		
-		Mood_Analyzer ma = new Mood_Analyzer();
-		ma.analyseMood("I am in happy mood ");
-		ma.analyseMood("I am in sad mood ");
+		Mood_Analyzer ma = new Mood_Analyzer(" I am in happy mood ");
+		
+		ma.analyseMood();
 		
 	}
 }
