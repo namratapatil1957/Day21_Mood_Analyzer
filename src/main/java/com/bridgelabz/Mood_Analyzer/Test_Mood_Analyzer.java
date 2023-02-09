@@ -43,4 +43,30 @@ public class Test_Mood_Analyzer {
 		Assert.assertEquals(excepted, actual);
 	}
 	
+	@Test
+	public void refactorTestCase1() {
+		
+		Mood_Analyzer ma = new Mood_Analyzer(" I am in sad mood ");
+		ma.analyseMood();
+		
+		String actual = "sad";
+		String excepted = "sad";
+		
+		Assert.assertEquals(excepted, actual);
+		
+	}
+	
+	@Test
+	public void refactorTestCase2() {
+		
+		Mood_Analyzer ma = new Mood_Analyzer(" I am in happy mood ");
+		ma.analyseMood();
+		
+		String actual = "happy";
+		String excepted = "happy";
+		
+		Assert.assertEquals(excepted, actual);
+		
+	}
+	
 }
