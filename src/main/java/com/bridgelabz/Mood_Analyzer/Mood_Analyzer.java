@@ -17,8 +17,8 @@ public class Mood_Analyzer {
 		
 		try {
 			
-			if (string == "") {
-				throw new MoodAnalysicException(" NULL_MOOD ", MoodAnalysicException.eType.NULL_MOOD);
+			if (string == " ") {
+				throw new MoodAnalysicException(" EMPTY_MOOD ", MoodAnalysicException.eType.EMPTY_MOOD);
 			}
 		
 			if (string.contains("happy")) {
@@ -42,7 +42,7 @@ public class Mood_Analyzer {
 		
 		Mood_Analyzer ma = new Mood_Analyzer();
 		
-		ma.analyseMood("");
+		ma.analyseMood(" ");
 		
 	}
 }
