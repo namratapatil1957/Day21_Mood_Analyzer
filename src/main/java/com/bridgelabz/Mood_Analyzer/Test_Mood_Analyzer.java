@@ -46,8 +46,8 @@ public class Test_Mood_Analyzer {
 	@Test
 	public void refactorTestCase1() {
 		
-		Mood_Analyzer ma = new Mood_Analyzer(" I am in sad mood ");
-		ma.analyseMood();
+		Mood_Analyzer mood = new Mood_Analyzer(" I am in sad mood ");
+		mood.analyseMood("");
 		
 		String actual = "sad";
 		String excepted = "sad";
@@ -59,14 +59,26 @@ public class Test_Mood_Analyzer {
 	@Test
 	public void refactorTestCase2() {
 		
-		Mood_Analyzer ma = new Mood_Analyzer(" I am in happy mood ");
-		ma.analyseMood();
+		Mood_Analyzer mood = new Mood_Analyzer(" I am in happy mood ");
+		mood.analyseMood("");
 		
 		String actual = "happy";
 		String excepted = "happy";
 		
 		Assert.assertEquals(excepted, actual);
 		
+	}
+	
+	@Test
+	public void nullMoodTestCase1() {
+		
+		Mood_Analyzer mood = new Mood_Analyzer();
+		mood.analyseMood("");
+		
+		String actual = "happy";
+		String excepted = "happy";
+		
+		Assert.assertEquals(excepted, actual);
 	}
 	
 }
