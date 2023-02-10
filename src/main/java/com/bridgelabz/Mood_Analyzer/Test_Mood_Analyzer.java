@@ -81,4 +81,17 @@ public class Test_Mood_Analyzer {
 		Assert.assertEquals(excepted, actual);
 	}
 	
+	@Test
+	public void enumTestCase1() {
+		
+		Mood_Analyzer mood = new Mood_Analyzer();
+		mood.analyseMood("");
+		
+		String actual = "happy";
+		String excepted = "happy";
+		
+		Assert.assertEquals(excepted, actual);
+		
+	}
+	
 }
