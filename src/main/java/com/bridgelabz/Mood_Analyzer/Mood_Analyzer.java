@@ -3,7 +3,8 @@ package com.bridgelabz.Mood_Analyzer;
 public class Mood_Analyzer {
 	
 	String string;
-
+	String happy;
+	
 	public Mood_Analyzer(String string) {
 		this.string = string;
 	}
@@ -12,12 +13,12 @@ public class Mood_Analyzer {
 		
 	}
 
-	public void analyseMood() {
+	public void analyseMood(String string) {
 		
 		try {
 			
 			if (string == "") {
-				throw new MoodAnalysicException(" Exception handled for null pointer ");
+				throw new MoodAnalysicException(" NULL_MOOD ", MoodAnalysicException.eType.NULL_MOOD);
 			}
 		
 			if (string.contains("happy")) {
@@ -32,16 +33,16 @@ public class Mood_Analyzer {
 			}
 			
 		}catch (MoodAnalysicException me) {
-			
 			System.out.println(me.getMessage());
 		}
+		
 	}
 	
 	public static void main(String[] args) {
 		
-		Mood_Analyzer ma = new Mood_Analyzer("");
+		Mood_Analyzer ma = new Mood_Analyzer();
 		
-		ma.analyseMood();
+		ma.analyseMood("");
 		
 	}
 }
